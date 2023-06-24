@@ -5,6 +5,55 @@
 
 *{
     font-family: 'Rubik', sans-serif;
-    color: red;
+    margin: 0;
+    padding: 0; 
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: 40vh;
+    background-image: url(../images/pattern-bg-desktop.png);
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+#search-bar{
+    width: 30vw;
+    border-style: none;
+    padding: 15px 20px;
+    margin: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 
 }
+
+#submit-btn{
+    background-color: black;
+    margin: 0px;
+    padding: 13px 20px;
+    padding-bottom: 15px;
+    padding-top: 14px;
+    border-style: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+#submit-btn:hover{
+    background-color: rgb(40, 39, 39);
+}
+input:focus{
+    outline: none;
+}
+
+
+
