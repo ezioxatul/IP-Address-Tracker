@@ -17,7 +17,13 @@
     height: 40vh;
     background-image: url(../images/pattern-bg-desktop.png);
     background-position: center;
-    background-size: cover;
+}
+@media screen and (max-width: 600px) {
+    .header{
+        width: 200vw;
+        height: 70vh;
+        align-items: center;
+    }
 }
 .app-name{
     color: white;
@@ -27,6 +33,12 @@
     margin-bottom: 30px;
     margin-top: 40px;
 }
+@media screen and (max-width: 600px){
+    .app-name{
+        font-size: 40px;
+    }
+}
+
 .app-input{
     text-align: center;
 }
@@ -40,6 +52,13 @@
     border-bottom-left-radius: 10px;
     font-weight: 300;
 }
+@media screen and (max-width: 600px){
+    #search-bar{
+        width: 120vw;
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+}
 
 #submit-btn{
     background-color: black;
@@ -52,6 +71,12 @@
     border-bottom-right-radius: 10px;
     cursor: pointer;
 }
+@media screen and (max-width: 600px){
+    #submit-btn{
+        padding: 22px 30px;
+        padding-top: 25px;
+    }
+}
 #submit-btn:hover{
     background-color: rgb(40, 39, 39);
 }
@@ -62,12 +87,20 @@ input:focus{
 .user-info{
     display: flex;
     justify-content: space-between;
-    size: 50px;
     background-color: white;
     margin: 40px 350px;
     padding-bottom: 200px;
     border-radius: 10px;
     overflow-wrap: normal;
+}
+
+@media screen and (max-width: 600px){
+    .user-info{
+        flex-direction: column;
+        width: 150vw;
+        height: 110vw;
+        align-items: center;
+    }
 }
 
 .user-info-box:first-child{
@@ -83,6 +116,13 @@ input:focus{
     height: 10vh;
     text-align: left;
     flex: 1; 
+}
+@media screen and (max-width: 600px){
+    .user-info-box{
+        border: none;
+        text-align: center;
+        font-size: 20px;
+    }
 }
 
 .user-info-name{
