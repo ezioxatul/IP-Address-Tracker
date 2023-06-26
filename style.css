@@ -15,7 +15,7 @@
     flex-direction: column;
     width: 100vw;
     height: 40vh;
-    background-image: url(../images/pattern-bg-desktop.png);
+    background-image: url("../images/pattern-bg-desktop.png");
     background-size: cover;
     
 }
