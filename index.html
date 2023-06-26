@@ -1,52 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IP Tracker</title>
-    <link rel="stylesheet" href="style.css"
-  </head>
-  <body>
-    <header class="header">
-      <div class="app">
-        
-        <div class="app-name">IP Address Tracker</div>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>IP Tracker</title>
+      <link rel="stylesheet" href="style.css"
+    </head>
+    <body>
+      <header class="header">
+        <div class="app">
+          
+          <div class="app-name">IP Address Tracker</div>
 
-        <div class="app-input">
-          <input
-            id="search-bar"
-            placeholder="Search for any IP address or domain"
-          /><button id="submit-btn" type="submit">
-            <img src="images\icon-arrow.svg"
-          </button>
-        </div>
-      </div>
-
-      <div class="user-info">
-
-        <div class="user-info-box user-info-1">
-        <div class="user-info-name">IP ADDRESS</div>
-        <div class="user-info-value">172.0.0.1</div>
+          <div class="app-input">
+            <input
+              id="search-bar"
+              placeholder="Search for any IP address or domain"
+            /><button id="submit-btn" type="submit">
+              <img src="images\icon-arrow.svg"
+            </button>
+          </div>
         </div>
 
-        <div class="user-info-box user-info-2">
-        <div class="user-info-name">LOCATION</div>
-        <div class="user-info-value">Las Vegas, Nevada, USA</div>
-        </div>
-        
-        <div class="user-info-box user-info-3">
-        <div class="user-info-name">TIMEZONE</div>
-        <div class="user-info-value">GMT -07:00</div>
-        </div>
-        
-        <div class="user-info-box user-info-4">
-        <div class="user-info-name">ISP</div>
-        <div class="user-info-value">AT&T</div>
-        </div>
-        
-      </div>
-    </header>
+        <div class="user-info">
 
-    <div class="map"></div>
-  </body>
-</html>
+          <div class="user-info-box user-info-1">
+          <div class="user-info-name">IP ADDRESS</div>
+          <div class="user-ip user-info-value">172.0.0.1</div>
+          </div>
+
+          <div class="user-info-box user-info-2">
+          <div class="user-info-name">LOCATION</div>
+          <div class="user-location user-info-value">Las Vegas, Nevada, USA</div>
+          </div>
+          
+          <div class="user-info-box user-info-3">
+          <div class="user-info-name">TIMEZONE</div>
+          <div class="user-timezone user-info-value">GMT -07:00</div>
+          </div>
+          
+          <div class="user-info-box user-info-4">
+          <div class="user-info-name">ISP</div>
+          <div class="user-isp user-info-value">AT&T</div>
+          </div>
+          
+        </div>
+      </header>
+
+      <div class="map"></div>
+      <script src="main.js"></script>
+    </body>
+  </html>

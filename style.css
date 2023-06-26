@@ -16,13 +16,15 @@
     width: 100vw;
     height: 40vh;
     background-image: url(../images/pattern-bg-desktop.png);
-    background-position: center;
+    background-size: cover;
+    
 }
 @media screen and (max-width: 600px) {
     .header{
         width: 200vw;
         height: 70vh;
         align-items: center;
+        background-size: cover;
     }
 }
 .app-name{
@@ -86,12 +88,15 @@ input:focus{
 
 .user-info{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: white;
-    margin: 40px 350px;
-    padding-bottom: 200px;
-    border-radius: 10px;
+    width: 60vw;
+    margin: auto;
+    padding-bottom: 3vw;
+    margin-top: 3vw;
+    border-radius: 10px;    
     overflow-wrap: normal;
+    box-shadow: 1px 1px 5px rgb(104, 103, 103);
 }
 
 @media screen and (max-width: 600px){
@@ -126,15 +131,15 @@ input:focus{
 }
 
 .user-info-name{
-    margin-left: 20px;
+    margin-left: 25px;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 10px;
     color: rgb(104, 104, 104);
     letter-spacing: 2px;
 }
 
 .user-info-value{
-    margin-left: 20px;
+    margin-left: 25px;
     margin-top: 8px;
     font-weight: bolder;
     font-size: larger;
