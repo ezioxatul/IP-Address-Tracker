@@ -1,6 +1,7 @@
 # IP address tracker
 
-![Design preview for the IP address tracker](./design/desktop-preview.jpg)
+![desktop-preview](https://github.com/ezioxatul/IP-Address-Tracker/assets/119116696/c83718bf-feeb-43ed-9d70-003c8ba7d972)
+
 
 ## Welcome! 👋
 
