@@ -7,38 +7,28 @@
     font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 0; 
-    box-sizing: border-box;
 }
 
 .header{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 40vh;
+    height: auto;
     background-image: url("./images/pattern-bg-desktop.png");
     background-size: cover;
+    align-items: center;
+    justify-content: center;
 }
-@media screen and (max-width: 600px) {
-    .header{
-        width: 200vw;
-        height: 70vh;
-        align-items: center;
-        background-size: cover;
-    }
-}
+
+
 .app-name{
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 2.5em;
     font-weight: 700;
-    margin-bottom: 30px;
-    margin-top: 40px;
+    margin: 3vh;
 }
-@media screen and (max-width: 600px){
-    .app-name{
-        font-size: 40px;
-    }
-}
+
 
 .app-input{
     text-align: center;
@@ -53,13 +43,6 @@
     border-bottom-left-radius: 10px;
     font-weight: 300;
 }
-@media screen and (max-width: 600px){
-    #search-bar{
-        width: 120vw;
-        padding: 20px 30px;
-        font-size: 20px;
-    }
-}
 
 #submit-btn{
     background-color: black;
@@ -72,12 +55,7 @@
     border-bottom-right-radius: 10px;
     cursor: pointer;
 }
-@media screen and (max-width: 600px){
-    #submit-btn{
-        padding: 22px 30px;
-        padding-top: 25px;
-    }
-}
+
 #submit-btn:hover{
     background-color: rgb(40, 39, 39);
 }
@@ -87,53 +65,37 @@ input:focus{
 
 .user-info{
     display: flex;
+    flex-direction: row;
+    width: 80vw;
+    align-items: center;
     justify-content: center;
-    background-color: white;
-    width: 60vw;
-    margin: auto;
-    padding-bottom: 3vw;
-    margin-top: 3vw;
-    border-radius: 10px;    
-    overflow-wrap: normal;
-    box-shadow: 1px 1px 5px rgb(104, 103, 103);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: rgba(0, 0, 0, 0.1) solid 1px;
+    margin: 5vh;
+    color: white;
+    padding-bottom: 2vh;
+    flex-wrap: wrap ;
 }
 
-@media screen and (max-width: 600px){
-    .user-info{
-        flex-direction: column;
-        width: 150vw;
-        height: 110vw;
-        align-items: center;
-    }
+.user-info-name{
+    color: white;
 }
 
-.user-info-box:first-child{
-    border-left: none;
-}
-.user-info-box:last-child{
-    border-right: none;
-}
 .user-info-box{
-    border-right: 1px solid rgb(86, 86, 86);
     padding-right: 10px;
     margin-top: 20px;
     height: 10vh;
     text-align: left;
     flex: 1; 
-}
-@media screen and (max-width: 600px){
-    .user-info-box{
-        border: none;
-        text-align: center;
-        font-size: 20px;
-    }
+    flex-wrap: wrap;
 }
 
 .user-info-name{
     margin-left: 25px;
     font-weight: 700;
     font-size: 10px;
-    color: rgb(104, 104, 104);
     letter-spacing: 2px;
 }
 
@@ -144,3 +106,7 @@ input:focus{
     font-size: larger;
 }
 
+header{
+    display: grid;
+    place-items: center;
+}
