@@ -5,13 +5,13 @@ const userTimezone = document.querySelector(".user-timezone")
 const userIsp = document.querySelector(".user-isp")
 let input = document.getElementById("search-bar")
 
-input.addEventListener("load", function() {
+/*input.addEventListener("load", function() {
   alert("input onLoad running")
 })
 
 document.addEventListener('DOMContentLoaded', function() {
   alert("doc content load running")
-});
+});*/
 
 
 input.addEventListener("keydown", function(event) {
