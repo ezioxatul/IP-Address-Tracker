@@ -5,15 +5,6 @@ const userTimezone = document.querySelector(".user-timezone")
 const userIsp = document.querySelector(".user-isp")
 let input = document.getElementById("search-bar")
 
-/*input.addEventListener("load", function() {
-  alert("input onLoad running")
-})
-
-document.addEventListener('DOMContentLoaded', function() {
-  alert("doc content load running")
-});*/
-
-
 input.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -37,7 +28,6 @@ submitBtn.addEventListener("click", function(){
 })
 
 window.onload = function() {
-  alert("Onload running");
     let inputValue = input.value;
     fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_8qHA7uC9YWKMtF7OpCzcL6Cb7e3kC&ipAddress=${inputValue}`)
     .then(response => response.json())
