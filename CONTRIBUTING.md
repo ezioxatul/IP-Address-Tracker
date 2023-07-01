@@ -2,8 +2,8 @@
 
 ## Getting Started
 
-1. Submit a comment on the issue you want to work on. This will let us know you are working on it.
-2. Fork the repository on GitHub
+1. Submit a comment on the issue you want to work on for getting the issue assigned to you.
+2. After the issue is assigned to you, Fork the repository on GitHub
 3. Clone the project to your own machine
 4. Commit changes to your own branch
 5. Push your work back up to your fork
