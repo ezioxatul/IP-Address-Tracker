@@ -4,6 +4,17 @@ const userLocation = document.querySelector(".user-location")
 const userTimezone = document.querySelector(".user-timezone")
 const userIsp = document.querySelector(".user-isp")
 let input = document.getElementById("search-bar")
+const map = L.map('map')
+const marker = L.marker([0,0]).addTo(map)
+
+function displayMap(longitude, latitude){
+  map.setView([latitude, longitude], 13);
+  marker.setLatLng([latitude, longitude]);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+}
 
 input.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
@@ -23,6 +34,9 @@ submitBtn.addEventListener("click", function(){
     userLocation.innerHTML = data.location.city + ", " + data.location.country
     userTimezone.innerHTML = "UTC " + data.location.timezone
     userIsp.innerHTML = data.isp
+    const longitude = data.location.lng
+    const latitude = data.location.lat
+    displayMap(longitude, latitude)
 })
 
 })
@@ -37,5 +51,10 @@ window.onload = function() {
         userLocation.innerHTML = data.location.city + ", " + data.location.country;
         userTimezone.innerHTML = "UTC " + data.location.timezone;
         userIsp.innerHTML = data.isp;
+        const longitude = data.location.lng;
+        const latitude = data.location.lat;
+        displayMap(longitude, latitude); 
     })
 };
+
+

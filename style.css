@@ -96,6 +96,7 @@ input:focus{
     border-radius: 10px;    
     overflow-wrap: normal;
     box-shadow: 1px 1px 5px rgb(104, 103, 103);
+    z-index: 1;
 }
 
 @media screen and (max-width: 600px){
@@ -144,3 +145,7 @@ input:focus{
     font-size: larger;
 }
 
+#map{
+    height: 60vh;
+    z-index: 0;
+}
