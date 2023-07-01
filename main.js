@@ -6,6 +6,12 @@ const userIsp = document.querySelector(".user-isp")
 let input = document.getElementById("search-bar")
 const map = L.map('map')
 const marker = L.marker([0,0]).addTo(map)
+const icon = L.icon({
+    iconUrl: './images/icon-location.svg',
+    iconSize: [46, 56],
+    iconAnchor: [23, 56]
+})
+marker.setIcon(icon)
 
 function displayMap(longitude, latitude){
   map.setView([latitude, longitude], 13);
