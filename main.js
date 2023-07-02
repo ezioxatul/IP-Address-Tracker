@@ -32,7 +32,7 @@ input.addEventListener("keydown", function(event) {
 
 function getData(){
     let inputValue = input.value;
-    fetch(`http://ip-api.com/json/${inputValue}`)
+    fetch(`https://ip-api.com/json/${inputValue}`)
     .then(response => response.json())
     .then(data => {
 
