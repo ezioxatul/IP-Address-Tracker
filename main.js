@@ -32,10 +32,13 @@ input.addEventListener("keydown", function(event) {
 
 function getData(){
     let inputValue = input.value;
-    fetch(`https://ip-api.com/json/${inputValue}`)
+    fetch(`http://ip-api.com/json/${inputValue}`)
     .then(response => response.json())
     .then(data => {
-
+      if (data.status === "fail"){
+        alert("Please enter a valid IP address")
+      }
+      else{
     userIp.innerHTML = data.query
     userLocation.innerHTML = data.city + ", " + data.country
     userTimezone.innerHTML = data.timezone
@@ -43,10 +46,22 @@ function getData(){
     const longitude = data.lon
     const latitude = data.lat
     displayMap(longitude, latitude)
+      }
 })
 }
 
-submitBtn.addEventListener("click", getData )
+function getDataAndVerify(){
+    let inputValue = input.value;
+    if (inputValue.match("[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}")){
+        data = getData()
+    }
+    else{
+        alert("Please enter a valid IP address")
+    }
+}
+
+
+submitBtn.addEventListener("click", getDataAndVerify )
 
 window.onload = getData();
 
