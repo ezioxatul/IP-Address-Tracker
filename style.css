@@ -1,9 +1,6 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Rubik&display=swap');
 
-
-*{
+* {
     font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 0; 
@@ -11,73 +8,50 @@
 }
 
 .header{
-    display: flex;
-    flex-direction: column;
     width: 100vw;
-    height: 40vh;
     background-image: url("./images/pattern-bg-desktop.png");
     background-size: cover;
+    padding: 75px 25px 75px 25px;
 }
-@media screen and (max-width: 600px) {
-    .header{
-        width: 200vw;
-        height: 70vh;
-        align-items: center;
-        background-size: cover;
-    }
-}
+
 .app-name{
     color: white;
     text-align: center;
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 30px;
-    margin-top: 40px;
-}
-@media screen and (max-width: 600px){
-    .app-name{
-        font-size: 40px;
-    }
 }
 
 .app-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    max-width: 400px;
     text-align: center;
 }
 
 #search-bar{
-    width: 30vw;
     border-style: none;
-    padding: 15px 20px;
-    margin: 0px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding: 15px 20px;
+    width: 100%;
     font-weight: 300;
-}
-@media screen and (max-width: 600px){
-    #search-bar{
-        width: 120vw;
-        padding: 20px 30px;
-        font-size: 20px;
-    }
 }
 
 #submit-btn{
-    background-color: black;
     margin: 0px;
-    padding: 13px 20px;
-    padding-bottom: 15px;
-    padding-top: 14px;
     border-style: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding: 13px 20px;
+    padding-bottom: 15px;
+    padding-top: 14px;
+    background-color: black;
     cursor: pointer;
 }
-@media screen and (max-width: 600px){
-    #submit-btn{
-        padding: 22px 30px;
-        padding-top: 25px;
-    }
-}
+
 #submit-btn:hover{
     background-color: rgb(40, 39, 39);
 }
@@ -87,51 +61,32 @@ input:focus{
 
 .user-info{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;  
+    padding: 10px; 
     background-color: white;
-    width: 60vw;
-    margin: auto;
-    padding-bottom: 3vw;
-    margin-top: 3vw;
-    border-radius: 10px;    
     overflow-wrap: normal;
     box-shadow: 1px 1px 5px rgb(104, 103, 103);
-    z-index: 1;
+    z-index: 999;
 }
 
-@media screen and (max-width: 600px){
-    .user-info{
-        flex-direction: column;
-        width: 150vw;
-        height: 110vw;
-        align-items: center;
-    }
-}
-
-.user-info-box:first-child{
-    border-left: none;
-}
-.user-info-box:last-child{
-    border-right: none;
+.user-info-box:first-child {
+    border: 0;
+    padding: 0;
 }
 .user-info-box{
-    border-right: 1px solid rgb(86, 86, 86);
-    padding-right: 10px;
-    margin-top: 20px;
-    height: 10vh;
+    border-left: 1px solid black;
+    padding-left: 10px;
     text-align: left;
-    flex: 1; 
 }
-@media screen and (max-width: 600px){
-    .user-info-box{
-        border: none;
-        text-align: center;
-        font-size: 20px;
-    }
+.user-info-box:last-child {
+    padding-right: 15px;
 }
 
 .user-info-name{
-    margin-left: 25px;
     font-weight: 700;
     font-size: 10px;
     color: rgb(104, 104, 104);
@@ -139,8 +94,6 @@ input:focus{
 }
 
 .user-info-value{
-    margin-left: 25px;
-    margin-top: 8px;
     font-weight: bolder;
     font-size: larger;
 }
@@ -148,4 +101,42 @@ input:focus{
 #map{
     height: 60vh;
     z-index: 0;
+}
+
+@media (max-width: 650px) {
+
+    .header{
+        padding: 35px 25px 35px 25px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 400px;
+    }
+
+    .user-info-box:first-child {
+        border: 0;
+        border-bottom: 1px solid black;
+        padding: 0 0 5px 0;
+    }
+    .user-info-box {
+        width: 100%;
+        border-bottom: 1px solid black; 
+        border-left: 0;
+        padding: 10px 0 5px 0;
+    }
+    .user-info-box:last-child {
+        padding: 10px 0 0px 0;
+        border: 0;
+    }
+
+}
+
+@media (max-width: 450px) {
+        .user-info-value{
+        font-weight: bolder;
+        font-size: larger;
+        font-size: 15px;
+    }
 }
