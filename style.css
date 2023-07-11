@@ -11,7 +11,7 @@
     width: 100vw;
     background-image: url("./images/pattern-bg-desktop.png");
     background-size: cover;
-    padding: 75px 25px 75px 25px;
+    padding: 75px 55px 0 55px;
 }
 
 .app-name{
@@ -60,13 +60,14 @@ input:focus{
 }
 
 .user-info{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     border-radius: 10px;  
-    padding: 10px; 
+    padding: 30px; 
     background-color: white;
     overflow-wrap: normal;
     box-shadow: 1px 1px 5px rgb(104, 103, 103);
@@ -75,15 +76,14 @@ input:focus{
 
 .user-info-box:first-child {
     border: 0;
-    padding: 0;
+    padding-left: 0;
 }
 .user-info-box{
-    border-left: 1px solid black;
     padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid rgb(104, 104, 104);
     text-align: left;
-}
-.user-info-box:last-child {
-    padding-right: 15px;
+    z-index: 999;
 }
 
 .user-info-name{
@@ -91,6 +91,7 @@ input:focus{
     font-size: 10px;
     color: rgb(104, 104, 104);
     letter-spacing: 2px;
+    padding-bottom: 4px;
 }
 
 .user-info-value{
@@ -99,41 +100,55 @@ input:focus{
 }
 
 #map{
-    height: 60vh;
-    z-index: 0;
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100vh;
+    z-index: 1;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     .header{
-        padding: 35px 25px 35px 25px;
+        padding: 75px 55px 0 55px;
     }
 
     .user-info {
         flex-direction: column;
         align-items: flex-start;
+        padding: 26px 10px;
         max-width: 400px;
     }
 
     .user-info-box:first-child {
         border: 0;
-        border-bottom: 1px solid black;
-        padding: 0 0 5px 0;
+        padding: 0 0 20px 0;
     }
     .user-info-box {
         width: 100%;
-        border-bottom: 1px solid black; 
         border-left: 0;
-        padding: 10px 0 5px 0;
+        padding: 0px 0 20px 0;
+        text-align: center;
     }
     .user-info-box:last-child {
-        padding: 10px 0 0px 0;
+        padding: 0px 0 0px 0;
         border: 0;
     }
-
+    
+    #map{
+        position: absolute;
+        top: -140px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        height: 100vh;
+        z-index: 1;
+    }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 325px) {
         .user-info-value{
         font-weight: bolder;
         font-size: larger;
