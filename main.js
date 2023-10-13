@@ -5,14 +5,13 @@ const userTimezone = document.querySelector(".user-timezone")
 const userIsp = document.querySelector(".user-isp")
 let input = document.getElementById("search-bar")
 const map = L.map('map')
-const marker = L.marker([0,0]).addTo(map) 
+const marker = L.marker([0,0]).addTo(map)
 const icon = L.icon({
     iconUrl: './images/icon-location.svg',
     iconSize: [46, 56],
     iconAnchor: [23, 56]
 })
 marker.setIcon(icon)
-
 
 function displayMap(longitude, latitude){
   map.setView([latitude, longitude], 13);
@@ -30,24 +29,36 @@ input.addEventListener("keydown", function(event) {
     }
   });
 
-function getData(){
+
+submitBtn.addEventListener("click", function(){
     let inputValue = input.value;
-    fetch(`https://ip-api.com/json/${inputValue}`)
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_8qHA7uC9YWKMtF7OpCzcL6Cb7e3kC&ipAddress=${inputValue}&domain=${inputValue}`)
     .then(response => response.json())
     .then(data => {
 
-    userIp.innerHTML = data.query
-    userLocation.innerHTML = data.city + ", " + data.country
-    userTimezone.innerHTML = data.timezone
-    userIsp.innerHTML = data.org
-    const longitude = data.lon
-    const latitude = data.lat
+    userIp.innerHTML = data.ip
+    userLocation.innerHTML = data.location.city + ", " + data.location.country
+    userTimezone.innerHTML = "UTC " + data.location.timezone
+    userIsp.innerHTML = data.isp
+    const longitude = data.location.lng
+    const latitude = data.location.lat
     displayMap(longitude, latitude)
 })
-}
 
-submitBtn.addEventListener("click", getData )
+})
 
-window.onload = getData();
+window.onload = function() {
+    let inputValue = input.value;
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_0Rorquq8tCFZMn3hupacATeEoQDWZ&ipAddress=${inputValue}`)
+    .then(response => response.json())
+    .then(data => {
 
-
+        userIp.innerHTML = data.ip;
+        userLocation.innerHTML = data.location.city + ", " + data.location.country;
+        userTimezone.innerHTML = "UTC " + data.location.timezone;
+        userIsp.innerHTML = data.isp;
+        const longitude = data.location.lng;
+        const latitude = data.location.lat;
+        displayMap(longitude, latitude); 
+    })
+};
